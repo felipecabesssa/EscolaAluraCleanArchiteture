@@ -9,4 +9,10 @@ public class CPF {
 		}
 		this.numero = numero;
 	}
+
+	public String getNumero() {
+		return numero;
+	}
+	
+	
 }
