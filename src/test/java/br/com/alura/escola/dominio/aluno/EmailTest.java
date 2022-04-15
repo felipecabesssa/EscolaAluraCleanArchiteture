@@ -1,22 +1,22 @@
-package br.com.alura.escola.aluno;
+package br.com.alura.escola.dominio.aluno;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-class TelefoneTest {
+class EmailTest {
 
 	@Test
-	void naoDeveriaCriarTelefoneComDDDsInvalidos() {
+	void naoDeveriaCriarEmailsComEnderecosInvalidos() {
 		
 		assertThrows(IllegalArgumentException.class, 
-				() -> new Telefone(null, "123456789"));
+				() -> new Email(null));
 		
 		assertThrows(IllegalArgumentException.class, 
-				() -> new Telefone("", "123456789"));
+				() -> new Email(""));
 		
 		assertThrows(IllegalArgumentException.class, 
-				() -> new Telefone("1", "123456789"));
+				() -> new Email("emailInvalido"));
 	}
 
 }
